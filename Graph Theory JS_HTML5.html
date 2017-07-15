@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <!-- saved from url=(0064)https://dl.dropboxusercontent.com/u/4189520/GraphJS/graphjs.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Graph Theory JS/HTML5</title>
-	<!-- By Andy Graulund -->
-	
-	<meta name="viewport" content="user-scalable=no, width=1070, initial-scale=1, maximum-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="stylesheet" href="./Graph Theory JS_HTML5_files/graphjs.css">
-	<script type="text/javascript" src="./Graph Theory JS_HTML5_files/jquery.min.js"></script>
-	<script type="text/javascript" src="./Graph Theory JS_HTML5_files/sylvester.src.js"></script>
-	<script type="text/javascript" src="./Graph Theory JS_HTML5_files/graph.js"></script>
+  <title>Graph Theory JS/HTML5</title>
+  <!-- By Andy Graulund -->
+  
+  <meta name="viewport" content="user-scalable=no, width=1070, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="./Graph Theory JS_HTML5_files/graphjs.css">
+  <script type="text/javascript" src="./Graph Theory JS_HTML5_files/jquery.min.js"></script>
+  <script type="text/javascript" src="./Graph Theory JS_HTML5_files/sylvester.src.js"></script>
+  <script type="text/javascript" src="./Graph Theory JS_HTML5_files/graph.js"></script>
 </head>
 <body>
-	<div id="container">
-		<div id="top">
-			<h1 id="logo">GraphJS</h1>
-			<ul id="toolbar">
-				<li class="left"><a id="btnselect" href="javascript://" class="uimode uimode-0 selected" title="Element selection mode (V)">Select</a></li>
-				<li><a id="btnaddvertex" href="javascript://" class="uimode uimode-2" title="Add a new vertex to the canvas (Alt+Click)">Add vertex</a></li>
-				<li class="right"><a id="btnaddedge" href="javascript://" class="uimode uimode-1" title="Add a new edge to the canvas (Shift+Alt+Click)">Add edge</a></li>
-				<li class="left right"><a id="btninfo" href="javascript://" title="Show/hide information box">Info</a></li>
-				<!-- <li class="left right"><a id="btnstyle" href="javascript://" title="Show/hide styles box">Styles</a></li> -->
-				<li class="left"><a id="btnload" href="javascript://" title="Load a saved graph from a string">Load</a></li>
-				<li><a id="btnsave" href="javascript://" title="Generate a saveable graph string">Save</a></li>
-				<li class="right"><a id="btnexport" href="javascript://" title="Export graph to various formats">Export</a></li>
-				<li class="left right"><a id="btnclear" href="javascript://" title="Clear the canvas">Clear</a></li>
-			</ul>
-		</div>
-		<div id="primary">
-			<canvas width="919" height="358"></canvas>
-		</div>
-		<div id="info" class="panel" style="display: block;"><div><a class="r button removebtn" href="javascript://">Remove vertex</a><h2>Vertex</h2><div class="col"><p class="field"><label for="label">Label: </label><input type="text" id="label" size="3" value="1" autocapitalize="off"></p><p class="field"><span class="i">Degree: </span>2</p></div><div class="col"><p class="field"><label for="vx">X: </label><input type="text" id="vx" size="3" value="101"></p><p class="field"><label for="vy">Y: </label><input type="text" id="vy" size="3" value="148"></p></div></div></div>
-		<div id="secondary">
-			<div id="graphs" class="panel">
-				<a class="add" href="javascript://" title="Add a new graph"><span>+</span></a>
-				<h2>Graphs</h2>
-				<ul class="elements"><li id="graph-0" class="selected"><a href="javascript://">Graph 1</a></li></ul>
-			</div>
-			<div id="elements" class="panel">
-				<h2>Elements</h2>
-				<ul class="elements"><li class="h">Vertices</li><li id="vertex-0" class="selected"><a href="javascript://">Vertex 1</a></li><li id="vertex-1"><a href="javascript://">Vertex 2</a></li><li id="vertex-2"><a href="javascript://">Vertex 3</a></li><li id="vertex-3"><a href="javascript://">Vertex 4</a></li><li class="h">Edges</li><li id="edge-0"><a href="javascript://">Edge </a></li><li id="edge-1"><a href="javascript://">Edge </a></li><li id="edge-2"><a href="javascript://">Edge </a></li><li id="edge-3"><a href="javascript://">Edge </a></li><li id="edge-4"><a href="javascript://">Edge </a></li></ul>
-			</div>
-			<div id="styles" class="panel">
-				<a class="add" href="javascript://" title="Add a new style"><span>+</span></a>
-				<h2>Styles</h2>
-				<ul class="elements"></ul>
-			</div>
-		</div>
-	</div>
+  <div id="container">
+    <div id="top">
+      <h1 id="logo">GraphJS</h1>
+      <ul id="toolbar">
+        <li class="left"><a id="btnselect" href="javascript://" class="uimode uimode-0 selected" title="Element selection mode (V)">Select</a></li>
+        <li><a id="btnaddvertex" href="javascript://" class="uimode uimode-2" title="Add a new vertex to the canvas (Alt+Click)">Add vertex</a></li>
+        <li class="right"><a id="btnaddedge" href="javascript://" class="uimode uimode-1" title="Add a new edge to the canvas (Shift+Alt+Click)">Add edge</a></li>
+        <li class="left right"><a id="btninfo" href="javascript://" title="Show/hide information box">Info</a></li>
+        <!-- <li class="left right"><a id="btnstyle" href="javascript://" title="Show/hide styles box">Styles</a></li> -->
+        <li class="left"><a id="btnload" href="javascript://" title="Load a saved graph from a string">Load</a></li>
+        <li><a id="btnsave" href="javascript://" title="Generate a saveable graph string">Save</a></li>
+        <li class="right"><a id="btnexport" href="javascript://" title="Export graph to various formats">Export</a></li>
+        <li class="left right"><a id="btnclear" href="javascript://" title="Clear the canvas">Clear</a></li>
+      </ul>
+    </div>
+    <div id="primary">
+      <canvas width="919" height="358"></canvas>
+    </div>
+    <div id="info" class="panel" style="display: block;"><div><a class="r button removebtn" href="javascript://">Remove vertex</a><h2>Vertex</h2><div class="col"><p class="field"><label for="label">Label: </label><input type="text" id="label" size="3" value="1" autocapitalize="off"></p><p class="field"><span class="i">Degree: </span>2</p></div><div class="col"><p class="field"><label for="vx">X: </label><input type="text" id="vx" size="3" value="101"></p><p class="field"><label for="vy">Y: </label><input type="text" id="vy" size="3" value="148"></p></div></div></div>
+    <div id="secondary">
+      <div id="graphs" class="panel">
+        <a class="add" href="javascript://" title="Add a new graph"><span>+</span></a>
+        <h2>Graphs</h2>
+        <ul class="elements"><li id="graph-0" class="selected"><a href="javascript://">Graph 1</a></li></ul>
+      </div>
+      <div id="elements" class="panel">
+        <h2>Elements</h2>
+        <ul class="elements"><li class="h">Vertices</li><li id="vertex-0" class="selected"><a href="javascript://">Vertex 1</a></li><li id="vertex-1"><a href="javascript://">Vertex 2</a></li><li id="vertex-2"><a href="javascript://">Vertex 3</a></li><li id="vertex-3"><a href="javascript://">Vertex 4</a></li><li class="h">Edges</li><li id="edge-0"><a href="javascript://">Edge </a></li><li id="edge-1"><a href="javascript://">Edge </a></li><li id="edge-2"><a href="javascript://">Edge </a></li><li id="edge-3"><a href="javascript://">Edge </a></li><li id="edge-4"><a href="javascript://">Edge </a></li></ul>
+      </div>
+      <div id="styles" class="panel">
+        <a class="add" href="javascript://" title="Add a new style"><span>+</span></a>
+        <h2>Styles</h2>
+        <ul class="elements"></ul>
+      </div>
+    </div>
+  </div>
 
 
 </body><div></div></html>
