@@ -461,7 +461,7 @@ function Vertex(id, value, x, y){
 	this.toTikZ    = function(size, maxY){
 		if(typeof size != n){ size = 1 }
 		var y = (typeof maxY == n && maxY > 0) ? maxY/size - this.y/size : this.y/size
-		return "\\draw (" + this.x/size*2 + "," + y*2 + ") node(v" + this.id + ") {" + this.value + "};"
+		return "\\draw (" + this.x/size*2 + "," + y*2 + ") node(v" + this.id + ") {$" + this.value + "$};"
 	}
 	
 	this.isNeighbour = function(v){
