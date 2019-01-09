@@ -160,7 +160,7 @@ function Graph(vertices, edges){
   }
   
   this.toTikZ    = function(){
-    var o    = "\\begin{tikzpicture}[\n  every label/.append style={shape=rectangle},% these three options could have\n  label\ndistance=1mm,                         % been assigned to a \path\n  every node/.append\nstyle={draw,circle},     % like in the example above.\n]"
+    var o    = "\\begin{tikzpicture}[\n  every label/.append style={shape=rectangle},% these three options could have\n  label\ndistance=1mm,                         % been assigned to a \path\n  every node/.append\n     % like in the example above.\n]"
     var maxY = 0
     for(var i in this.vertices){
       if(this.vertices[i].y > maxY){
@@ -462,7 +462,7 @@ function Vertex(id, value, x, y){
     if(typeof size != n){ size = 1 }
     var y = (typeof maxY == n && maxY > 0) ? maxY/size - this.y/size : this.y/size
     var outputValue = this.value ? `$${this.value}$` : ""
-    return "\\draw (" + this.x/size*2 + "," + y*2 + ") node(v" + this.id + ") {" + outputValue + "};"
+    return "\\draw (" + this.x/size*2 + "," + y*2 + ") node[draw, circle](v" + this.id + ") {" + outputValue + "};"
   }
   
   this.isNeighbour = function(v){
